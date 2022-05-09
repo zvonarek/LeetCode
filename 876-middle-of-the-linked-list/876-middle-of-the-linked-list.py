@@ -5,12 +5,16 @@
 #         self.next = next
 class Solution:
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        # once fast reaches end
+        fast = slow = head
+        # slow will be at the middle since it travels half as fast  
+        while fast and fast.next:
+            # this will ensure that at the very least fast.next will be non-null
+            try: 
+                fast = fast.next.next
+            except: 
+                fast = fast.next
+                
+            slow = slow.next
         
-        a = b = head
-        
-        while b and b.next:
-            a = a.next
-            b = b.next.next
-            
-            
-        return a
+        return slow
