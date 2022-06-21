@@ -24,6 +24,7 @@ class Solution:
       distGate += 1
       
    def addRoom(r,c):
-    if (r<0 or r==ROWS or c<0 or c==COLS or (r,c) in visit or rooms[r][c]==-1): return
+    if (r<0 or r==ROWS or c<0 or c==COLS or (r,c) in visit or rooms[r][c]==-1): 
+      return
     visit.add((r,c))
     queue.append([r,c])
