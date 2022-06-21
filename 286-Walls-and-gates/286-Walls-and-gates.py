@@ -6,7 +6,7 @@ class Solution:
     vist = set()
     queue = deque()
     
-    for r in range(ROWS):
+    for r in range(ROWS): 
       for c in range(COLS):
         if rooms[r][c] == 0:
           queue.append([r,c])
