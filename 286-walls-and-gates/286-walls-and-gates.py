@@ -1,4 +1,4 @@
-#Solution crafted by LeetCode: https://www.youtube.com/watch?v=e69C6xhiSQE
+#Solution originally crafted by LeetCode: https://www.youtube.com/watch?v=e69C6xhiSQE
 
 class Solution:
   def wallsandGates(self, rooms: List[List[int]]) -> None:
