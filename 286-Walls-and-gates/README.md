@@ -1,33 +1,27 @@
-Description
-You are given a m x n 2D grid initialized with these three possible values.
+# 286. Walls and Gates
 
--1 - A wall or an obstacle.
-0 - A gate.
-INF - Infinity means an empty room. We use the value 2^31 - 1 = 2147483647 to represent INF as you may assume that the distance to a gate is less than 2147483647.
-Fill each empty room with the distance to its nearest gate. If it is impossible to reach a Gate, that room should remain filled with INF
+You are given a *m x n* 2D grid initialized with these three possible values.
 
-Example 1 <br/>
+1. `-1` - A wall or an obstacle.
+2. `0` - A gate.
+3. `INF` - Infinity means an empty room. We use the value `231 - 1 = 2147483647` to represent `INF` as you may assume that the distance to a gate is less than `2147483647`.
 
-Input: <br/>
-[[2147483647,-1,0,2147483647],[2147483647,2147483647,2147483647,-1],[2147483647,-1,2147483647,-1],[0,-1,2147483647,2147483647]] <br/>
-Output: <br/> 
-[[3,-1,0,1],[2,2,1,-1],[1,-1,2,-1],[0,-1,3,4]] <br/>
+Fill each empty room with the distance to its *nearest* gate. If it is impossible to reach a gate, it should be filled with `INF`.
 
-Explanation: <br/>
-the 2D grid is: <br/>
-INF  -1  0  INF <br/>
-INF INF INF  -1 <br/>
-INF  -1 INF  -1 <br/>
-  0  -1 INF INF <br/>
-the answer is: <br/>
-  3  -1   0   1 <br/>
-  2   2   1  -1 <br/>
-  1  -1   2  -1 <br/>
-  0  -1   3   4 <br/>
+For example, given the 2D grid:
 
-Example 2 <br/>
+```
+INF  -1  0  INF
+INF INF INF  -1
+INF  -1 INF  -1
+  0  -1 INF INF
+```
 
-Input: <br/>
-[[0,-1],[2147483647,2147483647]] <br/>
-Output: <br/>
-[[0,-1],[1,2]]
+After running your function, the 2D grid should be:
+
+```
+  3  -1   0   1
+  2   2   1  -1
+  1  -1   2  -1
+  0  -1   3   4
+```
